@@ -1,0 +1,53 @@
+nav {
+  border-bottom: 1px solid rgb(199, 197, 197);
+  width: 100%;
+
+  .navbar {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    .navbar_left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding-left: 20px;
+
+      h3 {
+        color: gray;
+        font-size: 24px;
+      }
+
+      .classroom_logo {
+        height: 30px;
+        object-fit: fill;
+      }
+    }
+
+    .navbar_right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding-right: 20px;
+      .join {
+        font-size: 30px;
+      }
+      i {
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .user {
+        background-color: rgb(60, 136, 50);
+        color: white;
+        font-size: 20px;
+        border-radius: 100%;
+        padding: 5px 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+}

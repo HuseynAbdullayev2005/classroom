@@ -1,0 +1,259 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+nav {
+  border-bottom: 1px solid rgb(199, 197, 197);
+  width: 100%;
+}
+nav .navbar {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .navbar .navbar_left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-left: 20px;
+}
+nav .navbar .navbar_left h3 {
+  color: gray;
+  font-size: 24px;
+}
+nav .navbar .navbar_left .classroom_logo {
+  height: 30px;
+  object-fit: fill;
+}
+nav .navbar .navbar_right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-right: 20px;
+}
+nav .navbar .navbar_right .join {
+  font-size: 30px;
+}
+nav .navbar .navbar_right i {
+  font-size: 20px;
+  font-weight: 600;
+}
+nav .navbar .navbar_right .user {
+  background-color: rgb(60, 136, 50);
+  color: white;
+  font-size: 20px;
+  border-radius: 100%;
+  padding: 5px 10px;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  border-right: 1px solid rgb(199, 197, 197);
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  transition: width 300ms linear;
+  background-color: #f5f1f1;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  height: calc(100vh - 81px);
+  overflow: auto;
+}
+.sidebar a {
+  display: flex;
+  gap: 25px;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+.sidebar a i {
+  font-size: 18px;
+  color: grey;
+}
+.sidebar a:hover {
+  display: flex;
+  gap: 20px;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+.sidebar a:hover i {
+  font-size: 18px;
+  color: grey;
+}
+.sidebar a:hover p {
+  max-width: 100%;
+  transition: max-width 2s ease-in-out;
+  overflow: visible;
+}
+
+.sidebar:hover {
+  width: 300px;
+}
+
+.menu_click {
+  width: 300px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+  }
+  body .sidebar {
+    display: none;
+  }
+  body .sidebar a {
+    float: left;
+  }
+  body .sidebar a i {
+    font-size: 18px;
+    color: grey;
+  }
+}
+.content {
+  margin-left: 70px;
+  padding: 1px 16px;
+  margin-top: 20px;
+  height: 85vh;
+}
+.content .content_card {
+  border: 1px solid gray;
+  border-radius: 5px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 300px;
+}
+.content .content_card .content_card_image_absolute {
+  position: absolute;
+  top: 25%;
+  left: 75%;
+}
+.content .content_card .content_card_image_absolute img {
+  border-radius: 100%;
+  border: 1px solid black;
+  height: 60px;
+  object-fit: fill;
+}
+.content .content_card .content_card_icon {
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+  padding: 10px;
+}
+.content .content_card .content_card_icon i {
+  padding: 10px 0px;
+}
+.content .content_card .content_card_empty {
+  height: 100px;
+}
+.content .content_card .content_card_image {
+  height: 100px;
+  padding: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url("https://www.gstatic.com/classroom/themes/Honors.jpg");
+  background-size: cover;
+  width: 100%;
+}
+.content .content_card .content_card_image .content_card_image_menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content .content_card .content_card_image .content_card_image_menu .classname {
+  font-size: 20px;
+}
+.content .content_question {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border: 3px solid black;
+  border-radius: 100%;
+  padding: 0px 6px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 1px 16px;
+    margin-top: 50px;
+    height: 85vh;
+  }
+  .content .content_card {
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 250px;
+  }
+  .content .content_card .content_card_image_absolute {
+    position: absolute;
+    top: 25%;
+    left: 75%;
+  }
+  .content .content_card .content_card_image_absolute img {
+    border-radius: 100%;
+    border: 1px solid black;
+    height: 60px;
+    object-fit: fill;
+  }
+  .content .content_card .content_card_icon {
+    display: flex;
+    justify-content: end;
+    gap: 15px;
+    padding: 10px;
+  }
+  .content .content_card .content_card_icon i {
+    padding: 10px 0px;
+  }
+  .content .content_card .content_card_empty {
+    height: 100px;
+  }
+  .content .content_card .content_card_image {
+    height: 100px;
+    padding: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("https://www.gstatic.com/classroom/themes/Honors.jpg");
+    background-size: cover;
+    width: 100%;
+  }
+  .content .content_card .content_card_image .content_card_image_menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .content .content_card .content_card_image .content_card_image_menu .classname {
+    font-size: 20px;
+  }
+  .content .content_question {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    border: 3px solid black;
+    border-radius: 100%;
+    padding: 0px 6px;
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=main.css.map */
